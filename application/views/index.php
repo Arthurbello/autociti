@@ -31,19 +31,20 @@
 			})();
 		</script>
 		<style>
-			 @font-face { font-family: main_header; src: url('../../assets/RabbidHighwaySignII.otf'); } 
+			 @font-face { font-family: main_header; src: url('../../assets/fonts/bauserif.ttf'); } 
 			body{
 				display: none;
 			}
 			#main {
 				/* border : 1px solid silver; */
-				padding: 20px;
+				padding: 10px;
 				width: 70%;
 				background: linear-gradient(to right, #003366 0%,#234466 50%,#344d66 100%);
 				min-height: 2000px;
 				opacity: .99;
 				margin: auto;
 				text-align: center;
+				border: 10px solid white;
 				
 				
 			}
@@ -204,6 +205,23 @@ width: 100px;
 			color: green;
 			height: 20px;
 		}
+		
+		.flag{
+			width: 295px;
+			height: 150px;
+/* 			margin: 10px; */
+		}
+		#flag1{
+			margin-right: 10px;
+		}
+		#flag2{
+			margin-left: 10px;
+		}
+		#footer{
+			background: white;
+			width: 100%;
+			height: 150px;
+		}
 		/* radio focus */
 		
 		</style>
@@ -233,7 +251,9 @@ width: 100px;
 						echo '<p id="success">'.$_SESSION['signup_success'].'</p>';
 						unset($_SESSION['signup_success']);
 					}?>
+			<img id='flag1' class = 'flag' src="../../assets/flag1.png">
 			<img id='main_log' src="../../assets/Picture1.png">
+			<img id='flag2' class = 'flag' src="../../assets/flag2.jpg">
 			<p class="headers">Find your dream car</p>
 			<p class="lower">Just one click away</p>
 			<div id="car_types">
@@ -585,6 +605,7 @@ width: 100px;
 					</div>
 				</form>
 			</div>
+			<div id='footer'><p style="float: right;">© 2016 Autocitiltd.com All rights reserved.</p></div>
 			<script>
 				$(document).ready(function(){
 				var checks = 0;})

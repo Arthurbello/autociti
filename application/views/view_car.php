@@ -260,6 +260,11 @@
 				width: 300px;
 				height: 80px;
 			}
+			.car_image2{
+				width: 200px;
+				height: 100px;
+				
+			}
 		</style>
 	</head>
 	<body>
@@ -286,8 +291,19 @@
 					
 						<?php
 							echo '<img class="car_image" src="' . $data[0]->image_link . '"><br>';
+							echo '<img class="car_image2" src="' . $data[0]->image_link . '">';
+							if ($data[0]->image_link2 != ""){
+								echo '<img class="car_image2" src="' . $data[0]->image_link2 . '">';
+							}
+							if ($data[0]->image_link3 != ""){
+								echo '<img class="car_image2" src="' . $data[0]->image_link3 . '">';
+							}
+							if ($data[0]->image_link4 != ""){
+								echo '<img class="car_image2" src="' . $data[0]->image_link4 . '">';
+							}
+							
 							if (isset($_SESSION['email'])) { 
-											echo '<a id="favourite" href="/main/add_to_favourites/'.$data[0]->id.'"><img class="fav" src="../../assets/star.png">Favourite</a>';
+											echo '<br><br><a id="favourite" href="/main/add_to_favourites/'.$data[0]->id.'"><img class="fav" src="../../assets/star.png">Favourite</a>';
 											
 									}
 									if (isset($_SESSION['is_admin'])) { 
@@ -298,7 +314,7 @@
 							?>
 							<div class='content'>
 								<?php
-									echo '<p class="title">' . $data[0]->make . ' ' . $data[0]->model . ' ' . $data[0]->year . '</p><br>';
+									echo '<br><br><p class="title">' . $data[0]->make . ' ' . $data[0]->model . ' ' . $data[0]->year . '</p><br>';
 									echo '<p class="price"> ₦'. $data[0]->price.'</p><br><br>';
 									echo 'Color: '.$data[0]->color.'<br><br>';
 									echo 'Condition: '.$data[0]->car_condition.'<br><br>';

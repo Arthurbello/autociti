@@ -160,7 +160,7 @@ $query2 = $this->db->query('SELECT * FROM favourites WHERE users_id = '.$item->i
 		return $condition;
     }
     function add_new($thepost){
-	     $this->db->query('INSERT INTO cars(make, model, color, car_condition, style, year, price, image_link, description, mileage) VALUES ("'.$thepost["make"].'", "'.$thepost["model"].'", "'.$thepost["color"].'", "'.$thepost["condition"].'","'.$thepost["style"].'",'.$thepost["year"].','.$thepost["price"].',"'.$thepost["image"].'", "'.$thepost["description"].'",'.$thepost["mileage"].')');  
+	     $this->db->query('INSERT INTO cars(make, model, color, car_condition, style, year, price, image_link, description, mileage, image_link2, image_link3, image_link4) VALUES ("'.$thepost["make"].'", "'.$thepost["model"].'", "'.$thepost["color"].'", "'.$thepost["condition"].'","'.$thepost["style"].'",'.$thepost["year"].','.$thepost["price"].',"'.$thepost["image"].'", "'.$thepost["description"].'",'.$thepost["mileage"].', "'.$thepost["image2"].'", "'.$thepost["image3"].'", "'.$thepost["image4"].'")');  
 	     $_SESSION['successful_addition'] = 'Car successfully added!';
         return;
     }
