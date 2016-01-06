@@ -218,10 +218,16 @@ width: 100px;
 			margin-left: 10px;
 		}
 		#footer{
-			background: white;
+			color: grey;
+			background-image: url('../../assets/Picture1.png');
 			width: 100%;
 			height: 150px;
 		}
+		#rights{
+			vertical-align: bottom;
+			margin-top: 430;
+		}
+		
 		/* radio focus */
 		
 		</style>
@@ -243,7 +249,7 @@ width: 100px;
 				<a href="/main/login"><button class="btn btn-1 btn-1d">Login/SignUp</button></a>
 				
 				<?php } ?>
-				<button class="btn btn-1 btn-1d">FAQ</button>
+				<button class="btn btn-1 btn-1d">Contact Us</button>
 				<a href='/main/allcars'><button class="btn btn-1 btn-1d">All Cars</button></a>
 			</div>
 		<div id="main">
@@ -251,9 +257,9 @@ width: 100px;
 						echo '<p id="success">'.$_SESSION['signup_success'].'</p>';
 						unset($_SESSION['signup_success']);
 					}?>
-			<img id='flag1' class = 'flag' src="../../assets/flag1.png">
+			<img id='flag1' class = 'flag' src="../../assets/flag1.gif">
 			<img id='main_log' src="../../assets/Picture1.png">
-			<img id='flag2' class = 'flag' src="../../assets/flag2.jpg">
+			<img id='flag2' class = 'flag' src="../../assets/flag2.gif">
 			<p class="headers">Find your dream car</p>
 			<p class="lower">Just one click away</p>
 			<div id="car_types">
@@ -604,8 +610,9 @@ width: 100px;
 						<button type="submit" class="btn btn2 btn-1a">Search</button>
 					</div>
 				</form>
+				<p id='rights'>© 2016 Autocitiltd.com All rights reserved.</p>
 			</div>
-			<div id='footer'><p style="float: right;">© 2016 Autocitiltd.com All rights reserved.</p></div>
+			<div id='footer'></div>
 			<script>
 				$(document).ready(function(){
 				var checks = 0;})

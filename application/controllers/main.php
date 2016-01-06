@@ -42,6 +42,16 @@ class Main extends CI_Controller {
 		$this->load->view('login'); 
 	}
 	
+	public function post_mail()
+	{
+		$thepost = $this->input->post();
+		$msg = $thepost['message'];
+		$msg = wordwrap($msg,70);
+		mail("akintoyo@autocitiltd.com",$thepost['name']." Car quote",$msg);
+		header("Location: index");
+		
+	}
+	
 	public function logout()
 	{
 		$this->load->model('process');

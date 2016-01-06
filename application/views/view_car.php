@@ -265,6 +265,26 @@
 				height: 100px;
 				
 			}
+			#mail_form{
+				display: none;
+			}
+			.quote_box{
+				height: 50px;
+				width: 300px;
+			}
+			#submit_quote{
+				width: 110px;
+				height: 50px;
+				color: white;
+				background: linear-gradient(to right, rgba(21,125,57,1) 17.54%, #0d6327 82.11%)
+			}
+			#footer{
+			background: white;
+			width: 100%;
+			height: 150px;
+			color: white;
+			background: linear-gradient(to right, #003366 0%,#234466 50%,#344d66 100%);
+		}
 		</style>
 	</head>
 	<body>
@@ -283,7 +303,7 @@
 				<a href="/main/login"><button class="btn btn-1 btn-1d">Login/SignUp</button></a>
 				
 				<?php } ?>
-				<button class="btn btn-1 btn-1d">FAQ</button>
+				<button class="btn btn-1 btn-1d">Contact Us</button>
 				<a href='/main/allcars'><button class="btn btn-1 btn-1d">All Cars</button></a>
 		</div>
 		<div id="main"><br><br>
@@ -314,12 +334,19 @@
 							?>
 							<div class='content'>
 								<?php
-									echo '<br><br><p class="title">' . $data[0]->make . ' ' . $data[0]->model . ' ' . $data[0]->year . '</p><br>';
+									echo '<hr><br><p class="title">' . $data[0]->make . ' ' . $data[0]->model . ' ' . $data[0]->year . '</p><br>';
 									echo '<p class="price"> ₦'. $data[0]->price.'</p><br><br>';
 									echo 'Color: '.$data[0]->color.'<br><br>';
 									echo 'Condition: '.$data[0]->car_condition.'<br><br>';
 									echo 'Mileage: '.$data[0]->mileage.'<br><br>';
 									echo '<button class="pure-button pure-button-primary" id="quote">Get a quote</button>';
+									echo '<br><br><form method="post" action="/main/post_mail" id="mail_form">
+											<p>*All fields are required</p>
+											<input class="quote_box" required name="name" placeholder="Your full name"><br><br>
+											<input class="quote_box" required name="email" placeholder="Your email"><br><br>
+											<input class="quote_box" required name="phone_number" placeholder="Your phone number"><br><br>
+											<textarea required cols="50" rows="10" placeholder="Your message" name="message"></textarea>
+											<br><br><button  id="submit_quote"type="submit"> Submit </button>';
 									echo '<p class="description">' . $data[0]->description. '</p><br>';
 									
 // 									echo $item->color . '<br>';
@@ -327,6 +354,14 @@
 							</div>
 				
 		</div>
-		
+		<div id='footer'><p style="float: right;">© 2016 Autocitiltd.com All rights reserved.</p></div>
+		<script>
+			$('.car_image2').click(function(){
+				$('.car_image').attr('src', $(this).attr('src'));
+			})
+			$('#quote').click(function(){
+				$('#mail_form').toggle(300);
+			})
+		</script>
 	</body>
 </html>

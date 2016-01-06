@@ -299,7 +299,12 @@
 			#favourite{
 				margin-right: 60px; 
 			}
-			
+			#footer{
+			color: white;
+			background: linear-gradient(to right, #003366 0%,#234466 50%,#344d66 100%);
+			width: 100%;
+			height: 150px;
+		}
 			
 		</style>
 	</head>
@@ -319,7 +324,7 @@
 				<a href="/main/login"><button class="btn btn-1 btn-1d">Login/SignUp</button></a>
 				
 				<?php } ?>
-				<button class="btn btn-1 btn-1d">FAQ</button>
+				<button class="btn btn-1 btn-1d">Contact Us</button>
 				<button class="btn btn-1 btn-1d">All Cars</button>
 			</div>
 			<div class="filters">
@@ -401,6 +406,7 @@
 				}?>
 
 		</div>
+		<div id='footer'><p style="float: right;">© 2016 Autocitiltd.com All rights reserved.</p></div>
 		<script>
 			$('#color_header').click(function(){
 				$('.filter_hiddens').css('display', 'none');

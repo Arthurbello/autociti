@@ -181,6 +181,12 @@
 			.delete_favourite{
 				color: red;
 			}
+			#footer{
+			color: white;
+			background: linear-gradient(to right, #003366 0%,#234466 50%,#344d66 100%);
+			width: 100%;
+			height: 150px;
+		}
 			
 		</style>
 	</head>
@@ -200,7 +206,7 @@
 				<a href="/main/login"><button class="btn btn-1 btn-1d">Login/SignUp</button></a>
 				
 				<?php } ?>
-				<button class="btn btn-1 btn-1d">FAQ</button>
+				<button class="btn btn-1 btn-1d">Contact Us</button>
 				<a href='/main/allcars'><button class="btn btn-1 btn-1d">All Cars</button></a>
 		</div>
 		<div id="main">
@@ -241,7 +247,7 @@
 		<br>
 		<br>
 		<br>
-		
+		<div id='footer'><p style="float: right;">© 2016 Autocitiltd.com All rights reserved.</p></div>
 		<script src="js/classie.js"></script>
 		<script>
 			var buttons7Click = Array.prototype.slice.call( document.querySelectorAll( '#btn-click button' ) ),
@@ -276,5 +282,6 @@
 				classie.add( document.querySelector( '#trash-effect' ), 'trash-effect-active' );
 			}, false );
 		</script>
+		
 	</body>
 </html>
